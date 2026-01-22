@@ -1,0 +1,55 @@
+:root {
+    --padding: 15px;
+    --gap: 15px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template: repeat(3, 1fr)/1fr 2fr 1fr;
+}
+
+.dashboard {
+    background-color: cornflowerblue;
+    color: white;
+    grid-area: 1/1/4/1;
+    padding: var(--padding);
+
+    /* grid settings */
+    display: grid;
+    gap: var(--gap);
+    grid-template-rows: 4rem 1fr 1fr;
+}
+
+.dashboard div {
+    display: grid;
+    grid-template-columns: 2rem 2fr;
+    grid-template-rows: repeat(auto-fill, 2rem);
+}
+
+.header {
+    background-color: azure;
+    grid-area: 1/2/1/4;
+}
+
+
+.projects {
+    background-color: orange;
+    grid-area: 2/2/4/2;
+}
+
+.news {
+    background-color: green;
+    grid-area: 2/3/2/4;
+}
+
+.trending {
+    background-color: purple;
+    grid-area: 3/3/4/4;
+}
