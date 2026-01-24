@@ -1,6 +1,7 @@
 :root {
-    --padding: 15px;
-    --gap: 15px;
+    --padding: 20px;
+    --gap: 20px;
+    --text-color: white;
 }
 
 html,
@@ -12,31 +13,91 @@ body {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template: repeat(3, 1fr)/1fr 2fr 1fr;
+    grid-template-rows: 20ch 1fr 1fr;
+    grid-template-columns: 30ch 2fr 1fr;
+
 }
 
 .dashboard {
     background-color: cornflowerblue;
-    color: white;
     grid-area: 1/1/4/1;
     padding: var(--padding);
-
     /* grid settings */
     display: grid;
     gap: var(--gap);
-    grid-template-rows: 4rem 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
 }
 
-.dashboard div {
+.dashboard .app-title {
     display: grid;
-    grid-template-columns: 2rem 2fr;
-    grid-template-rows: repeat(auto-fill, 2rem);
+    grid-template-columns: 2rem 20ch;
+    justify-items: start;
+    align-items: center;
+    color: var(--text-color);
+    gap: var(--gap);
 }
+
+.dashboard .links {
+    /* display: grid; */
+    /* grid-template-rows: repeat(auto-fit, 1.5rem); */
+    gap: var(--gap);
+}
+
+.dashboard a {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-color);
+    grid-template-columns: 1rem 20ch;
+    gap: var(--gap);
+}
+
 
 .header {
     background-color: azure;
     grid-area: 1/2/1/4;
+
+    /* Grid settings */
+    /* display: grid;
+    grid-template-rows: 1fr 2fr; */
 }
+
+/* .header-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: var(--padding);
+    gap: 30px;
+}
+
+.header-top div {
+    display: grid;
+    gap: var(--gap);
+} */
+
+/* .header-top .item1 {
+    grid-template-columns: 2rem 2fr 1fr;
+}
+
+.header .item2 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.header-top input {
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 15px;
+}
+
+
+.user-profile {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    border-radius: 30px;
+} */
 
 
 .projects {
