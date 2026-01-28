@@ -132,14 +132,14 @@ body {
 
     /* Grid Setting */
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 450px);
 }
 
 .card {
     border-radius: 10px;
     overflow: hidden;
-    width: 400px;
-    height: 200px;
+    width: 450px;
+    height: 250px;
     background-color: white;
 
     /* Grid Settings */
@@ -154,19 +154,11 @@ body {
 
     /* Grid Setting */
     display: grid;
-    grid-template-rows: 2rem 1fr 2rem;
+    grid-template-rows: 2rem 10rem 2rem;
 }
 
 .card-color-decoration {
     background-color: #fcb624;
-}
-
-.card-content h2 {
-    display: inline-block;
-}
-
-.card-content p {
-    display: inline-block;
 }
 
 .card-actions {
@@ -175,6 +167,7 @@ body {
     grid-template-columns: repeat(3, min-content);
     align-items: center;
     justify-content: end;
+    gap: var(--gap);
 }
 
 .card-actions img {
