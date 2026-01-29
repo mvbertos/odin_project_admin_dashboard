@@ -132,14 +132,12 @@ body {
 
     /* Grid Setting */
     display: grid;
-    grid-template-columns: repeat(2, 450px);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .card {
     border-radius: 10px;
     overflow: hidden;
-    width: 450px;
-    height: 250px;
     background-color: white;
 
     /* Grid Settings */
@@ -154,7 +152,7 @@ body {
 
     /* Grid Setting */
     display: grid;
-    grid-template-rows: 2rem 10rem 2rem;
+    grid-template-rows: 2rem 1fr 2rem;
 }
 
 .card-color-decoration {
