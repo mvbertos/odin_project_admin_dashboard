@@ -4,6 +4,7 @@
     --text-color: white;
     --dashboard-bg-color: #008cd4;
     --page-background-color: #e0e7f0;
+    --border-radius: 10px;
 }
 
 @font-face {
@@ -17,6 +18,7 @@ body,
 h1,
 h2 {
     margin: 0px;
+    padding: 0px;
 }
 
 html,
@@ -28,15 +30,13 @@ body {
 
 .container {
     display: grid;
-    height: 100%;
-    width: 100%;
     grid-template-rows: 20ch 1fr 1fr;
     grid-template-columns: 30ch 2fr 1fr;
 
 }
 
 .dashboard {
-    background-color: cornflowerblue;
+    background-color: var(--dashboard-bg-color);
     grid-area: 1/1/4/1;
     padding: var(--padding);
     /* grid settings */
@@ -175,11 +175,41 @@ body {
 }
 
 .news {
-    background-color: green;
     grid-area: 2/3/2/4;
+    gap: var(--gap);
+    padding: var(--padding);
+
+    /* Grid Settings */
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+}
+
+.news-board {
+    gap: var(--gap);
+    padding: var(--padding);
+    background-color: white;
+    border-radius: var(--border-radius);
+    display: grid;
+}
+
+.news-card {
+    overflow: hidden;
+    padding: var(--padding);
+    display: grid;
+    grid-template-rows: 2rem 3rem;
+}
+
+.news-card h2 {
+    text-wrap-mode: nowrap;
+}
+
+.division {
+    height: 2px;
+    background-color: gray;
+    border-radius: 10px;
 }
 
 .trending {
-    background-color: purple;
+    background-color: rgb(107, 90, 107);
     grid-area: 3/3/4/4;
 }
