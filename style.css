@@ -74,47 +74,94 @@ body {
 
 
 .header {
-    background-color: azure;
+    background-color: white;
     grid-area: 1/2/1/4;
+    gap: var(--gap);
+    padding: var(--padding);
 
     /* Grid settings */
-    /* display: grid;
-    grid-template-rows: 1fr 2fr; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-/* .header-top {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: var(--padding);
-    gap: 30px;
-}
-
-.header-top div {
-    display: grid;
+.header>div {
     gap: var(--gap);
-} */
 
-/* .header-top .item1 {
-    grid-template-columns: 2rem 2fr 1fr;
+
+    /* Grid Settings */
+    display: inline-grid;
+    overflow: hidden;
+    grid-template-columns: 1.5fr 1fr;
 }
 
-.header .item2 {
-    grid-template-columns: repeat(3, 1fr);
+.header img {
+    height: 25px;
+}
+
+.search-area {
+    gap: var(--gap);
+    justify-content: start;
+    align-items: center;
+
+    /* Grid Settings */
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.search-area input {
+    height: 2rem;
+    border-radius: 16px;
+    border: none;
+    background-color: var(--page-background-color);
 }
 
 
-.header-top input {
-    border: 1px solid rgb(202, 202, 202);
-    border-radius: 15px;
+.user-notifications {
+    gap: var(--gap);
+    justify-content: end;
+    align-items: center;
+    font-size: 1rem;
+
+    /* Grid Settings */
+    display: grid;
+    grid-auto-flow: column;
 }
 
+.user-notifications .user-image {
+    height: 40px;
+    border-radius: 45px;
+}
 
-.user-profile {
+.user-details {
+    align-items: center;
+    gap: var(--gap);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.user-details .user-image {
     height: 50px;
-    width: 50px;
-    background-color: grey;
-    border-radius: 30px;
-} */
+    border-radius: 45px;
+}
+
+.user-actions {
+    justify-content: end;
+    align-items: center;
+    gap: var(--gap);
+    display: grid;
+    grid-auto-flow: column;
+
+}
+
+.user-actions button {
+    border: none;
+    height: 40px;
+    width: 100px;
+
+    color: white;
+    background-color: var(--dashboard-bg-color);
+    border-radius: 20px;
+}
 
 
 .projects {
